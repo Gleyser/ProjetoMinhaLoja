@@ -30,8 +30,9 @@
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>9.3.7.v20160115</version>
 				<configuration>
-					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<scanIntervalSeconds>10</scanIntervalSeconds>					
 				</configuration>
+
 			</plugin>
 		</plugins>
 	</build>

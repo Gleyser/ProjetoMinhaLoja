@@ -15,7 +15,7 @@ public class ContatoServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		PrintWriter writer = resp.getWriter();
-        writer.println("<html><h2>Fale conosco</h2></html>");
+        writer.println("<html><h2>Entre em contato</h2></html>");
         writer.close();
 	}
 
