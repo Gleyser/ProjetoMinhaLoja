@@ -27,8 +27,7 @@ public class NovaEmpresaServlet extends HttpServlet {
 		lab.setNome(nomeLaboratorio);
 		lab.setCapacidade(capacidade);
 		Banco banco = new Banco();
-		banco.adiciona(lab);
-		
+		banco.adiciona(lab);	
 		 
 		PrintWriter out = resp.getWriter();
 		out.println("<html><body>Laboratório " + nomeLaboratorio + " cadastrado com sucesso com a capacidade " + capacidade + " </body></html>");
