@@ -1,11 +1,11 @@
 <%
 //scriptlet
-String nomeEmpresa = (String)request.getAttribute("empresa");
-System.out.println(nomeEmpresa);
+String nomeLaboratorio = (String)request.getAttribute("laboratorio");
+System.out.println(nomeLaboratorio);
 %>
 
 <html>
 <body>
-Empresa <%= (nomeEmpresa) %>  cadastrada com sucesso!
+Empresa ${laboratorio} cadastrada com sucesso!
 </body>
 </html>

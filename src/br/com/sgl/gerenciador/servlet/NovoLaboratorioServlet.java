@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class NovaEmpresaServlet
  */
 @WebServlet("/novaEmpresa")
-public class NovaEmpresaServlet extends HttpServlet {
+public class NovoLaboratorioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	// Não é uma boa prática possuir código de interface e visualização HTML dentro de uma classe. 
@@ -33,7 +33,7 @@ public class NovaEmpresaServlet extends HttpServlet {
 		
 		//chamar o JSP
         RequestDispatcher rd = req.getRequestDispatcher("/novoLaboratorioCriado.jsp");
-        req.setAttribute("empresa", lab.getNome());
+        req.setAttribute("laboratorio", lab.getNome());
         rd.forward(req, resp);
 		 
 		//PrintWriter out = resp.getWriter();
