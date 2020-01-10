@@ -1,6 +1,7 @@
 <%
-    String nomeEmpresa = "teste";
-    System.out.println(nomeEmpresa);
+//scriptlet
+String nomeEmpresa = (String)request.getAttribute("empresa");
+System.out.println(nomeEmpresa);
 %>
 
 <html>

@@ -4,7 +4,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,15 +24,10 @@ public class ListaLaboratorioServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Banco banco = new Banco();
         List<Laboratorio> lista = banco.getLaboratorios();
-        PrintWriter out = response.getWriter();
-
-        out.println("<html><body>");
-        out.println("<ul>");
-        for (Laboratorio lab : lista) { 
-            out.println("<li>" + lab.getNome() + "</li>");
-        }       
-        out.println("</ul>");
-        out.println("</body></html>");
+        request.setAttribute("laboratorios", lista);
+        
+        RequestDispatcher rd = request.getRequestDispatcher("/listaLaboratorios.jsp"); 
+        rd.forward(request,response);
 
 	}
 	
