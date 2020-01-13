@@ -7,9 +7,9 @@
 <body>
 
 	<ul>
-		 <forEach>
+		<c:forEach>
 
-        </forEach>
+			</forEach>
 	</ul>
 
 </body>
