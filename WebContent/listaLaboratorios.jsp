@@ -6,10 +6,12 @@
 </head>
 <body>
 
-	<ul>
-		<c:forEach>
+ Lista de laboratórios: <br />
 
-			</forEach>
+	<ul>
+		<c:forEach items="${laboratorios}" var="lab">
+			<li>${lab.nome }</li>
+		</c:forEach>
 	</ul>
 
 </body>
