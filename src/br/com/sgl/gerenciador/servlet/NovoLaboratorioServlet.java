@@ -2,6 +2,9 @@ package br.com.sgl.gerenciador.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,9 +28,19 @@ public class NovoLaboratorioServlet extends HttpServlet {
 		System.out.println("Cadastrando novo laboratório");
 		String nomeLaboratorio = req.getParameter("nome");
 		String  capacidade = req.getParameter("capacidade");
-		Laboratorio lab = new Laboratorio();
+		String paramDataLaboratorio = req.getParameter("data");
+		Laboratorio lab = new Laboratorio();	
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			Date dataAbertura = sdf.parse(paramDataLaboratorio);
+			lab.setDataAbertura(dataAbertura);
+			
+		} catch (ParseException e) {
+			throw new ServletException(e);
+		}
+		
 		lab.setNome(nomeLaboratorio);
-		lab.setCapacidade(capacidade);
+		lab.setCapacidade(capacidade);		
 		Banco banco = new Banco();
 		banco.adiciona(lab);	
 		

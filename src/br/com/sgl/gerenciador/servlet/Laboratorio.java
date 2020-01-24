@@ -1,9 +1,12 @@
 package br.com.sgl.gerenciador.servlet;
 
+import java.util.Date;
+
 public class Laboratorio {
 	private String id;
 	private String nome;
 	private String capacidade;
+	private Date dataAbertura;
 	
 	
 	public String getId() {
@@ -23,6 +26,12 @@ public class Laboratorio {
 	}
 	public void setCapacidade(String capacidade) {
 		this.capacidade = capacidade;
+	}
+	public Date getDataAbertura() {
+		return dataAbertura;
+	}
+	public void setDataAbertura(Date dataAbertura) {
+		this.dataAbertura = dataAbertura;
 	}
 	
 	

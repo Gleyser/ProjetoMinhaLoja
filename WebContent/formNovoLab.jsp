@@ -14,6 +14,7 @@
 
 		Nome: <input type="text" name="nome" /> <br><br>
 		Capacidade: <input type="text" name="capacidade" />
+		Data de abertura: <input type="text" name="data" />
 		<input type="submit"/>
 
 	</form>
