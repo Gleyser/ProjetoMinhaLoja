@@ -45,7 +45,7 @@ public class NovoLaboratorioServlet extends HttpServlet {
 		banco.adiciona(lab);	
 		
 		//chamar o JSP
-        RequestDispatcher rd = req.getRequestDispatcher("/novoLaboratorioCriado.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/ListaLaboratorios");
         req.setAttribute("laboratorio", lab.getNome());
         rd.forward(req, resp);
 		 

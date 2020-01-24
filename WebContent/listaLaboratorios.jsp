@@ -7,6 +7,10 @@
 </head>
 <body>
 
+<c:if test="${not empty laboratorio}">
+            Laboratório ${laboratorio} cadastrado com sucesso!
+        </c:if>
+
  Lista de laboratórios: <br />
 
 	<ul>
