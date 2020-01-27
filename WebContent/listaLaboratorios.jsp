@@ -16,6 +16,7 @@
 	<ul>
 		<c:forEach items="${laboratorios}" var="lab">
 			<li>${lab.nome} - <fmt:formatDate value="${lab.dataAbertura}" pattern="dd/MM/yyyy"/></li>
+			<a href="/gerenciador/removeLaboratorio?id=${laboratorio.id}">remove</a>
 		</c:forEach>
 	</ul>
 
